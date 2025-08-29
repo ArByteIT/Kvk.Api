@@ -28,7 +28,7 @@ public sealed class KvkApiErrorHandler : DelegatingHandler
                 {
                     foreach (var error in errorResponse.Errors)
                     {
-                        ThrowFixerApiException(error, response.StatusCode);
+                        ThrowApiException(error, response.StatusCode);
                     }
                 }
             }
@@ -42,7 +42,7 @@ public sealed class KvkApiErrorHandler : DelegatingHandler
         return response;
     }
 
-    private static void ThrowFixerApiException(KvkError error, HttpStatusCode httpStatusCode)
+    private static void ThrowApiException(KvkError error, HttpStatusCode httpStatusCode)
     {
         throw httpStatusCode switch
         {

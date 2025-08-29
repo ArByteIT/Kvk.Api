@@ -2,7 +2,7 @@
 using Kvk.Api.Client.Extensions;
 using Kvk.Api.Client.Options;
 using Kvk.Api.Client.V1;
-using Kvk.Api.Client.V2.Zoeken;
+using Kvk.Api.Client.V2;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -59,7 +59,7 @@ public class ServiceCollectionExtensionsTests
         Assert.Equal(new Uri("https://api.kvk.nl/test/api/v2/"), httpV2Client.BaseAddress);
         Assert.Equal("testkey", httpV2Client.DefaultRequestHeaders.FirstOrDefault(h => h.Key == "apikey").Value.FirstOrDefault());
 
-        // Assert FixerApiErrorHandler registered in DI container
+        // Assert KvkApiErrorHandler registered in DI container
         var errorHandler = provider.GetService<KvkApiErrorHandler>();
         Assert.NotNull(errorHandler);
     }

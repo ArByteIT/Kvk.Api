@@ -1,7 +1,7 @@
 ﻿using Kvk.Api.Client.Exceptions;
 using Kvk.Api.Client.Options;
 using Kvk.Api.Client.V1;
-using Kvk.Api.Client.V2.Zoeken;
+using Kvk.Api.Client.V2;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
