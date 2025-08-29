@@ -5,7 +5,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Kvk.Api.Client.V2;
+namespace Kvk.Api.Client.V2.Zoeken;
 
 public class KvkApiV2Client : IKvkApiV2Client
 {

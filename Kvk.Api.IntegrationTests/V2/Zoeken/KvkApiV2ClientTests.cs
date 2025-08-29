@@ -1,14 +1,10 @@
 ﻿using Kvk.Api.Client.Exceptions;
-using Kvk.Api.Client.V2;
+using Kvk.Api.Client.V2.Zoeken;
 
-namespace Kvk.Api.IntegrationTests.V2;
+namespace Kvk.Api.IntegrationTests.V2.Zoeken;
 
 public class KvkApiV2ClientTests : BaseTests
 {
-    public KvkApiV2ClientTests() : base()
-    {
-    }
-
     [Fact]
     public async Task SearchAsync_SearchKvkNumber_ReturnsSuccess()
     {

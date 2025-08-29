@@ -5,10 +5,6 @@ namespace Kvk.Api.IntegrationTests.V1.Zoeken;
 
 public class KvkApiV1ClientTests : BaseTests
 {
-    public KvkApiV1ClientTests() : base()
-    {
-    }
-
     [Fact]
     public async Task SearchAsync_SearchKvkNumber_ReturnsSuccess()
     {

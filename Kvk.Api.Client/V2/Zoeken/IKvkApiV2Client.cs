@@ -1,4 +1,4 @@
-﻿namespace Kvk.Api.Client.V2;
+﻿namespace Kvk.Api.Client.V2.Zoeken;
 
 public interface IKvkApiV2Client
 {
