@@ -27,10 +27,10 @@ public class BasisProfielResponse
     public string? StatutaireNaam { get; set; }
 
     [JsonPropertyName("handelsnamen")]
-    public List<Handelsnamen> Handelsnamen { get; set; }
+    public List<Handelsnamen> Handelsnamen { get; set; } = new List<Handelsnamen>();
 
     [JsonPropertyName("sbiActiviteiten")]
-    public List<SbiActiviteiten> SbiActiviteiten { get; set; }
+    public List<SbiActiviteiten> SbiActiviteiten { get; set; } = new List<SbiActiviteiten>();
 
     [JsonPropertyName("_links")]
     public AdditionalPropLinks Links { get; set; }

@@ -15,10 +15,10 @@ public class EmbeddedEigenaar
     public string? UitgebreideRechtsvorm { get; set; }
 
     [JsonPropertyName("adressen")]
-    public List<Adressen> Adressen { get; set; }
+    public List<Adressen> Adressen { get; set; } = new List<Adressen>();
 
     [JsonPropertyName("websites")]
-    public List<string> Websites { get; set; }
+    public List<string> Websites { get; set; } = new List<string>();
 
     [JsonPropertyName("_links")]
     public Links Links { get; set; }

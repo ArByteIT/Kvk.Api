@@ -19,7 +19,7 @@ public class BasisprofielVestigingenResponse
     public int? TotaalAantalVestigingen { get; set; }
 
     [JsonPropertyName("vestigingen")]
-    public List<BasisprofielVestigingen> Vestigingen { get; set; }
+    public List<BasisprofielVestigingen> Vestigingen { get; set; } = new List<BasisprofielVestigingen>();
 
     [JsonPropertyName("_links")]
     public Links Links { get; set; }

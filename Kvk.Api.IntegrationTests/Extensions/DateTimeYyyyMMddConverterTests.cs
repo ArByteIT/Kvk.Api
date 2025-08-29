@@ -11,7 +11,7 @@ public class DateTimeYyyyMMddConverterTests
     {
         _options = new JsonSerializerOptions
         {
-            Converters = { new DateTimeYyyyMMddConverter("yyyyMMdd") }
+            Converters = { new DateTimeYyyyMMddConverter() }
         };
     }
 

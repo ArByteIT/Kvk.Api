@@ -8,5 +8,5 @@ public class AbonnementenResponse
     public string? KlantId { get; set; }
 
     [JsonPropertyName("abonnementen")]
-    public List<Abonnement> Abonnementen { get; set; }
+    public List<Abonnement> Abonnementen { get; set; } = new List<Abonnement>();
 }

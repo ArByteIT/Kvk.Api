@@ -3,9 +3,14 @@ using System.Text.Json.Serialization;
 
 namespace Kvk.Api.Client.Extensions;
 
-internal sealed class DateTimeYyyyMMddConverter : JsonConverter<DateTime>
+internal sealed class JsonDateTimeConverter : JsonConverter<DateTime>
 {
     private readonly string Format = "yyyyMMdd";
+
+    public JsonDateTimeConverter(string format)
+    {
+        Format = format;
+    }
 
     public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {

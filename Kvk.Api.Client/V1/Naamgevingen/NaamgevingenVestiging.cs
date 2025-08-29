@@ -12,10 +12,10 @@ public class NaamgevingenVestiging
     public string? EersteHandelsnaam { get; set; }
 
     [JsonPropertyName("handelsnamen")]
-    public List<Handelsnamen> Handelsnamen { get; set; }
+    public List<Handelsnamen> Handelsnamen { get; set; } = new List<Handelsnamen>();
 
     [JsonPropertyName("_links")]
-    public List<Link> Links { get; set; }
+    public List<Link> Links { get; set; } = new List<Link>();
 
     [JsonPropertyName("naam")]
     public string? Naam { get; set; }

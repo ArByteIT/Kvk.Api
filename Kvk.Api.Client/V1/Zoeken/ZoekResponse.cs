@@ -39,7 +39,7 @@ public class ZoekResponse
     /// List of search result items.
     /// </summary>
     [JsonPropertyName("resultaten")]
-    public List<Resultaat>? Resultaten { get; set; }
+    public List<Resultaat>? Resultaten { get; set; } = new List<Resultaat>();
 
     /// <summary>
     /// HATEOAS links related to this resource.

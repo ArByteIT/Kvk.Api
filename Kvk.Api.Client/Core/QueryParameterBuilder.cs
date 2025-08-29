@@ -1,6 +1,6 @@
 ﻿namespace Kvk.Api.Client.Core;
 
-public class QueryParameterBuilder
+internal sealed class QueryParameterBuilder
 {
     public static string ToQueryString(object obj, string prefix = "?")
     {

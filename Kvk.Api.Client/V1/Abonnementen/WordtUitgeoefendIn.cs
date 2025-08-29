@@ -8,7 +8,7 @@ public class WordtUitgeoefendIn
     public string? Vestigingsnummer { get; set; }
 
     [JsonPropertyName("activiteiten")]
-    public List<Activiteiten> Activiteiten { get; set; }
+    public List<Activiteiten> Activiteiten { get; set; } = new List<Activiteiten>();
 
     [JsonPropertyName("bezoekadres")]
     public Bezoekadres Bezoekadres { get; set; }

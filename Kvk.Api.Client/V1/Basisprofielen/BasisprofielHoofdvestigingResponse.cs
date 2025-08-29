@@ -45,16 +45,16 @@ public class BasisprofielHoofdvestigingResponse
     public int? DeeltijdWerkzamePersonen { get; set; }
 
     [JsonPropertyName("handelsnamen")]
-    public List<Handelsnamen> Handelsnamen { get; set; }
+    public List<Handelsnamen> Handelsnamen { get; set; } = new List<Handelsnamen>();
 
     [JsonPropertyName("adressen")]
-    public List<Adressen> Adressen { get; set; }
+    public List<Adressen> Adressen { get; set; } = new List<Adressen>();
 
     [JsonPropertyName("websites")]
-    public List<string> Websites { get; set; }
+    public List<string> Websites { get; set; } = new List<string>();
 
     [JsonPropertyName("sbiActiviteiten")]
-    public List<SbiActiviteiten> SbiActiviteiten { get; set; }
+    public List<SbiActiviteiten> SbiActiviteiten { get; set; } = new List<SbiActiviteiten>();
 
     [JsonPropertyName("_links")]
     public AdditionalPropLinks Links { get; set; }

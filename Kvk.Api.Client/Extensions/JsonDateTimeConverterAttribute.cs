@@ -2,7 +2,7 @@
 
 namespace Kvk.Api.Client.Extensions;
 
-public class JsonDateTimeConverterAttribute : JsonConverterAttribute
+internal sealed class JsonDateTimeConverterAttribute : JsonConverterAttribute
 {
     private readonly string _format;
 
@@ -15,7 +15,7 @@ public class JsonDateTimeConverterAttribute : JsonConverterAttribute
     {
         if (typeToConvert == typeof(DateTime) || typeToConvert == typeof(DateTime?))
         {
-            return new DateTimeYyyyMMddConverter(_format);
+            return new JsonDateTimeConverter(_format);
         }
 
         throw new InvalidOperationException($"JsonDateTimeConvertAttribute can only be applied to DateTime or Nullable<DateTime> properties, not {typeToConvert}.");

@@ -5,7 +5,7 @@ namespace Kvk.Api.Client.V1.Abonnementen;
 public class AbonnementResponse
 {
     [JsonPropertyName("signalen")]
-    public List<Signalen> Signalen { get; set; }
+    public List<Signalen> Signalen { get; set; } = new List<Signalen>();
 
     [JsonPropertyName("pagina")]
     public int? Pagina { get; set; }

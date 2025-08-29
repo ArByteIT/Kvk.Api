@@ -27,8 +27,8 @@ public class NaamgevingenResponse
     public string? Einddatum { get; set; }
 
     [JsonPropertyName("vestigingen")]
-    public List<NaamgevingenVestiging> Vestigingen { get; set; }
+    public List<NaamgevingenVestiging> Vestigingen { get; set; } = new List<NaamgevingenVestiging>();
 
     [JsonPropertyName("_links")]
-    public List<Link> Links { get; set; }
+    public List<Link> Links { get; set; } = new List<Link>();
 }

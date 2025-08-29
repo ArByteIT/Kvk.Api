@@ -17,5 +17,5 @@ public class HeeftBetrekkingOp
     public int? TotaalWerkzamePersonen { get; set; }
 
     [JsonPropertyName("wordtUitgeoefendIn")]
-    public List<WordtUitgeoefendIn> WordtUitgeoefendIn { get; set; }
+    public List<WordtUitgeoefendIn> WordtUitgeoefendIn { get; set; } = new List<WordtUitgeoefendIn>();
 }

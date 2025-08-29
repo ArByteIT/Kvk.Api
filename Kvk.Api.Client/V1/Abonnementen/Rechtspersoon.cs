@@ -5,7 +5,7 @@ namespace Kvk.Api.Client.V1.Abonnementen;
 public class Rechtspersoon
 {
     [JsonPropertyName("activiteiten")]
-    public List<object> Activiteiten { get; set; }
+    public List<object> Activiteiten { get; set; } = new List<object>();
 
     [JsonPropertyName("bezoekadres")]
     public Bezoekadres Bezoekadres { get; set; }
