@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kvk.Api.Client", "Kvk.Api.Client\Kvk.Api.Client.csproj", "{DF1F2937-F94C-4A41-BC6B-6D650E005F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kvk.Api.IntegrationTests", "Kvk.Api.IntegrationTests\Kvk.Api.IntegrationTests.csproj", "{86BC0193-0C37-42AB-93DC-5C4B4DD4A351}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF1F2937-F94C-4A41-BC6B-6D650E005F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1F2937-F94C-4A41-BC6B-6D650E005F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1F2937-F94C-4A41-BC6B-6D650E005F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1F2937-F94C-4A41-BC6B-6D650E005F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BC0193-0C37-42AB-93DC-5C4B4DD4A351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BC0193-0C37-42AB-93DC-5C4B4DD4A351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BC0193-0C37-42AB-93DC-5C4B4DD4A351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BC0193-0C37-42AB-93DC-5C4B4DD4A351}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09AF1DDD-75CC-4480-9C45-6F30240B7684}
+	EndGlobalSection
+EndGlobal
