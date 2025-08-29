@@ -2,7 +2,7 @@
 
 namespace Kvk.Api.Client.V1;
 
-public class Links
+public class AdditionalPropLinks
 {
     [JsonPropertyName("additionalProp1")]
     public AdditionalProp1 AdditionalProp1 { get; set; }

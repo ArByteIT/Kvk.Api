@@ -2,7 +2,7 @@
 
 public class QueryParameterBuilder
 {
-    public static string ToQueryString(object obj)
+    public static string ToQueryString(object obj, string prefix = "?")
     {
         var properties = obj.GetType().GetProperties();
         var parameters = new List<string>();
@@ -25,6 +25,6 @@ public class QueryParameterBuilder
             }
         }
         
-        return string.Join('&', parameters);
+        return prefix + string.Join('&', parameters);
     }
 }

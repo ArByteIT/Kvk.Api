@@ -2,7 +2,7 @@
 
 namespace Kvk.Api.Client.V1;
 
-public class BasisProfiel
+public class BasisProfielResponse
 {
     [JsonPropertyName("kvkNummer")]
     public string? KvkNummer { get; set; }
@@ -32,7 +32,7 @@ public class BasisProfiel
     public List<SbiActiviteiten> SbiActiviteiten { get; set; }
 
     [JsonPropertyName("_links")]
-    public Links Links { get; set; }
+    public AdditionalPropLinks Links { get; set; }
 
     [JsonPropertyName("_embedded")]
     public Embedded Embedded { get; set; }

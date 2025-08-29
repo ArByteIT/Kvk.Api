@@ -19,53 +19,73 @@ public class KvkApiV1Client : IKvkApiV1Client
         _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
     }
 
+    public async Task<AbonnementResponse?> GetAbonnementAsync(AbonnementRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"abonnementen/{request.AbonnementId}{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<AbonnementResponse>(url, cancellationToken);
+    }
+
+    public async Task<AbonnementenResponse?> GetAbonnementenAsync(CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = "abonnementen";
+        return await client.GetFromJsonAsync<AbonnementenResponse>(url, cancellationToken);
+    }
+
+    public async Task<AbonnementSignalenResponse?> GetAbonnementSignalenAsync(AbonnementSignalenRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"abonnementen/{request.AbonnementId}/signalen/{request.SignaalId}{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<AbonnementSignalenResponse>(url, cancellationToken);
+    }
+
+    public async Task<BasisProfielResponse?> GetBasisprofielAsync(BasisProfielRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"basisprofielen/{request.KvkNummer}{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<BasisProfielResponse>(url, cancellationToken);
+    }
+
+    public async Task<BasisprofielEigenaarResponse?> GetBasisprofielEigenaarAsync(BasisprofielEigenaarRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"basisprofielen/{request.KvkNummer}/eigenaar{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<BasisprofielEigenaarResponse>(url, cancellationToken);
+    }
+
+    public async Task<BasisprofielHoofdvestigingResponse?> GetBasisprofielHoofdvestigingAsync(BasisprofielHoofdvestigingRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"basisprofielen/{request.KvkNummer}/hoofdvestiging{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<BasisprofielHoofdvestigingResponse>(url, cancellationToken);
+    }
+
+    public async Task<BasisprofielVestigingenResponse?> GetBasisprofielVestigingenAsync(BasisprofielVestigingenRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"basisprofielen/{request.KvkNummer}/vestigingen{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<BasisprofielVestigingenResponse>(url, cancellationToken);
+    }
+
+    public async Task<NaamgevingenResponse?> GetNaamgevingenAsync(NaamgevingenRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"naamgevingen/kvknummer/{request.KvkNummer}{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<NaamgevingenResponse>(url, cancellationToken);
+    }
+
+    public async Task<VestigingsprofielenResponse?> GetVestigingsprofielenAsync(VestigingsprofielenRequest request, CancellationToken cancellationToken = default)
+    {
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"vestigingsprofielen/{request.Vestigingsnummer}{QueryParameterBuilder.ToQueryString(request)}";
+        return await client.GetFromJsonAsync<VestigingsprofielenResponse>(url, cancellationToken);
+    }
+
     public async Task<ZoekResponse?> ZoekenAsync(ZoekRequest request, CancellationToken cancellationToken = default)
     {
-        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV2ClientName);
-        var url = "zoeken?" + QueryParameterBuilder.ToQueryString(request);
+        var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
+        var url = $"zoeken{QueryParameterBuilder.ToQueryString(request)}";
         return await client.GetFromJsonAsync<ZoekResponse>(url, cancellationToken);
-    }
-
-    public void GetBasisProfielAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void GetBasisProfielEigenaarAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void GetBasisProfielHoofdvestigingAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void GetBasisProfielVestigingenAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void GetVestigingsprofielAsync(string vestigingsnummer, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void GetNaamgevingAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void GetAbonnementenAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-    public void GetAbonnementAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-    public void GetAbonnementSignaalAsync(string kvkNumber, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
     }
 }

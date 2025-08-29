@@ -8,6 +8,6 @@ public class Embedded
     public Hoofdvestiging Hoofdvestiging { get; set; }
 
     [JsonPropertyName("eigenaar")]
-    public Eigenaar Eigenaar { get; set; }
+    public EmbeddedEigenaar Eigenaar { get; set; }
 }
 

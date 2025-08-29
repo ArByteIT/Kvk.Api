@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Net.WebRequestMethods;
-
-namespace Kvk.Api.Client.Constants;
+﻿namespace Kvk.Api.Client.Constants;
 
 /// <summary>
 /// https://developers.kvk.nl/nl/documentation#status-codes

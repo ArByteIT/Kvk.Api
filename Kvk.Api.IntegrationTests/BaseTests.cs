@@ -28,7 +28,7 @@ public class BaseTests
             throw new InvalidOperationException("Set KVK_API_KEY environment variable before running tests.");
 
         var services = new ServiceCollection();
-        Dictionary<string, string?>? inMemorySettings = new Dictionary<string, string?>
+        Dictionary<string, string?>? inMemorySettings = new()
         {
             [$"{KvkOptions.SectionName}:BaseUrl"] = baseUrl,
             [$"{KvkOptions.SectionName}:ApiKey"] = apiKey

@@ -52,4 +52,3 @@ public class Adressen
     [JsonPropertyName("geoData")]
     public GeoData GeoData { get; set; }
 }
-
