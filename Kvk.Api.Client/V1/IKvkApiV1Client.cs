@@ -1,4 +1,10 @@
-﻿namespace Kvk.Api.Client.V1;
+﻿using Kvk.Api.Client.V1.Abonnementen;
+using Kvk.Api.Client.V1.Basisprofielen;
+using Kvk.Api.Client.V1.Naamgevingen;
+using Kvk.Api.Client.V1.Vestigingsprofielen;
+using Kvk.Api.Client.V1.Zoeken;
+
+namespace Kvk.Api.Client.V1;
 
 public interface IKvkApiV1Client
 {
