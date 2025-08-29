@@ -27,5 +27,5 @@ public class BasisprofielVestigingen
     public string? VolledigAdres { get; set; }
 
     [JsonPropertyName("_links")]
-    public Links Links { get; set; }
+    public Links? Links { get; set; }
 }

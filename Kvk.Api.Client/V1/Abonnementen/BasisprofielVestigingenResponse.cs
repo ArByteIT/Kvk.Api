@@ -22,5 +22,5 @@ public class BasisprofielVestigingenResponse
     public List<BasisprofielVestigingen> Vestigingen { get; set; } = new List<BasisprofielVestigingen>();
 
     [JsonPropertyName("_links")]
-    public Links Links { get; set; }
+    public Links? Links { get; set; }
 }

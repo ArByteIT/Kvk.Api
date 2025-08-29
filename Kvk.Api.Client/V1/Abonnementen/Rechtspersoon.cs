@@ -8,7 +8,7 @@ public class Rechtspersoon
     public List<object> Activiteiten { get; set; } = new List<object>();
 
     [JsonPropertyName("bezoekadres")]
-    public Bezoekadres Bezoekadres { get; set; }
+    public Bezoekadres? Bezoekadres { get; set; }
 
     [JsonPropertyName("persoonRechtsvorm")]
     public string? PersoonRechtsvorm { get; set; }

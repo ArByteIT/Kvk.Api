@@ -11,7 +11,7 @@ public class WordtUitgeoefendIn
     public List<Activiteiten> Activiteiten { get; set; } = new List<Activiteiten>();
 
     [JsonPropertyName("bezoekadres")]
-    public Bezoekadres Bezoekadres { get; set; }
+    public Bezoekadres? Bezoekadres { get; set; }
 
     [JsonPropertyName("isHoofdvestiging")]
     public bool? IsHoofdvestiging { get; set; }

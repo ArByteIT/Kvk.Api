@@ -5,9 +5,9 @@ namespace Kvk.Api.Client.V1.Basisprofielen;
 public class Embedded
 {
     [JsonPropertyName("hoofdvestiging")]
-    public Hoofdvestiging Hoofdvestiging { get; set; }
+    public Hoofdvestiging? Hoofdvestiging { get; set; }
 
     [JsonPropertyName("eigenaar")]
-    public EmbeddedEigenaar Eigenaar { get; set; }
+    public EmbeddedEigenaar? Eigenaar { get; set; }
 }
 

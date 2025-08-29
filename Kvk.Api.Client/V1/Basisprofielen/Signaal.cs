@@ -9,7 +9,7 @@ public class Signaal
     public string? BerichtId { get; set; }
 
     [JsonPropertyName("heeftBetrekkingOp")]
-    public HeeftBetrekkingOp HeeftBetrekkingOp { get; set; }
+    public HeeftBetrekkingOp? HeeftBetrekkingOp { get; set; }
 
     [JsonPropertyName("registratieId")]
     public string? RegistratieId { get; set; }
@@ -21,7 +21,7 @@ public class Signaal
     public string? SignaalType { get; set; }
 
     [JsonPropertyName("heeftGewijzigdeGegevens")]
-    public HeeftGewijzigdeGegevens HeeftGewijzigdeGegevens { get; set; }
+    public HeeftGewijzigdeGegevens? HeeftGewijzigdeGegevens { get; set; }
 
     [JsonPropertyName("indicatieCorrectie")]
     public bool? IndicatieCorrectie { get; set; }

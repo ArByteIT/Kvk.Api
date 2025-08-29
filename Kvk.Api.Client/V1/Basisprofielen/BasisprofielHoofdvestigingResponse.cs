@@ -21,7 +21,7 @@ public class BasisprofielHoofdvestigingResponse
     public string? FormeleRegistratiedatum { get; set; }
 
     [JsonPropertyName("materieleRegistratie")]
-    public MaterieleRegistratie MaterieleRegistratie { get; set; }
+    public MaterieleRegistratie? MaterieleRegistratie { get; set; }
 
     [JsonPropertyName("statutaireNaam")]
     public string? StatutaireNaam { get; set; }
@@ -57,5 +57,5 @@ public class BasisprofielHoofdvestigingResponse
     public List<SbiActiviteiten> SbiActiviteiten { get; set; } = new List<SbiActiviteiten>();
 
     [JsonPropertyName("_links")]
-    public AdditionalPropLinks Links { get; set; }
+    public AdditionalPropLinks? Links { get; set; }
 }

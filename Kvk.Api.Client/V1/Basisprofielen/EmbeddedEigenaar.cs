@@ -21,5 +21,5 @@ public class EmbeddedEigenaar
     public List<string> Websites { get; set; } = new List<string>();
 
     [JsonPropertyName("_links")]
-    public Links Links { get; set; }
+    public Links? Links { get; set; }
 }

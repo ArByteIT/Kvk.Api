@@ -50,5 +50,5 @@ public class Adressen
     public string? Land { get; set; }
 
     [JsonPropertyName("geoData")]
-    public GeoData GeoData { get; set; }
+    public GeoData? GeoData { get; set; }
 }

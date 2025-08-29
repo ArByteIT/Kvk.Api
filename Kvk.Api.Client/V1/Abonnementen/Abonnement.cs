@@ -9,7 +9,7 @@ public class Abonnement
     public string? Id { get; set; }
 
     [JsonPropertyName("contract")]
-    public Contract Contract { get; set; }
+    public Contract? Contract { get; set; }
 
     [JsonPropertyName("startDatum")]
     public DateTime? StartDatum { get; set; }

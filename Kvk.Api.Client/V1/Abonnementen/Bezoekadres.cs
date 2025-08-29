@@ -8,5 +8,5 @@ public class Bezoekadres
     public bool? Afgeschermd { get; set; }
 
     [JsonPropertyName("postcode")]
-    public Postcode Postcode { get; set; }
+    public Postcode? Postcode { get; set; }
 }

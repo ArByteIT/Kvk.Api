@@ -21,7 +21,7 @@ public class VestigingsprofielenResponse
     public string? FormeleRegistratiedatum { get; set; }
 
     [JsonPropertyName("materieleRegistratie")]
-    public MaterieleRegistratie MaterieleRegistratie { get; set; }
+    public MaterieleRegistratie? MaterieleRegistratie { get; set; }
 
     [JsonPropertyName("statutaireNaam")]
     public string? StatutaireNaam { get; set; }
@@ -57,5 +57,5 @@ public class VestigingsprofielenResponse
     public List<SbiActiviteiten> SbiActiviteiten { get; set; } = new List<SbiActiviteiten>();
 
     [JsonPropertyName("_links")]
-    public Links Links { get; set; }
+    public Links? Links { get; set; }
 }

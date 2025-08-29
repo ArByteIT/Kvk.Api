@@ -21,6 +21,6 @@ public class BasisprofielEigenaarResponse
     public List<string> Websites { get; set; } = new List<string>();
 
     [JsonPropertyName("_links")]
-    public AdditionalPropLinks Links { get; set; }
+    public AdditionalPropLinks? Links { get; set; }
 }
 

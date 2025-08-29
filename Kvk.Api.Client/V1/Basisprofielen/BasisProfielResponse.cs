@@ -18,7 +18,7 @@ public class BasisProfielResponse
     public string? FormeleRegistratiedatum { get; set; }
 
     [JsonPropertyName("materieleRegistratie")]
-    public MaterieleRegistratie MaterieleRegistratie { get; set; }
+    public MaterieleRegistratie? MaterieleRegistratie { get; set; }
 
     [JsonPropertyName("totaalWerkzamePersonen")]
     public int? TotaalWerkzamePersonen { get; set; }
@@ -33,9 +33,9 @@ public class BasisProfielResponse
     public List<SbiActiviteiten> SbiActiviteiten { get; set; } = new List<SbiActiviteiten>();
 
     [JsonPropertyName("_links")]
-    public AdditionalPropLinks Links { get; set; }
+    public AdditionalPropLinks? Links { get; set; }
 
     [JsonPropertyName("_embedded")]
-    public Embedded Embedded { get; set; }
+    public Embedded? Embedded { get; set; }
 }
 

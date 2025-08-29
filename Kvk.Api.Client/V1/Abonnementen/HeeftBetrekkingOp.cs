@@ -11,7 +11,7 @@ public class HeeftBetrekkingOp
     public bool? NonMailing { get; set; }
 
     [JsonPropertyName("heeftAlsEigenaar")]
-    public HeeftAlsEigenaar HeeftAlsEigenaar { get; set; }
+    public HeeftAlsEigenaar? HeeftAlsEigenaar { get; set; }
 
     [JsonPropertyName("totaalWerkzamePersonen")]
     public int? TotaalWerkzamePersonen { get; set; }
