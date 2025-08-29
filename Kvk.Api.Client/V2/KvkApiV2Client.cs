@@ -22,7 +22,7 @@ public class KvkApiV2Client : IKvkApiV2Client
     public async Task<ZoekResponse?> ZoekenAsync(ZoekRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV2ClientName);
-        var url = "zoeken?" + QueryParameterBuilder.ToQueryString(request);
+        var url = $"zoeken{QueryParameterBuilder.ToQueryString(request)}";
         return await client.GetFromJsonAsync<ZoekResponse>(url, cancellationToken);
     }
 }
