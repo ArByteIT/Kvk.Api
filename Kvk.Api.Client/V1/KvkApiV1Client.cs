@@ -24,6 +24,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
     }
 
+    /// <inheritdoc />
     public async Task<AbonnementResponse?> GetAbonnementAsync(AbonnementRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -31,6 +32,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<AbonnementResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<AbonnementenResponse?> GetAbonnementenAsync(CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -38,6 +40,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<AbonnementenResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<AbonnementSignalenResponse?> GetAbonnementSignalenAsync(AbonnementSignalenRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -45,6 +48,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<AbonnementSignalenResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<BasisProfielResponse?> GetBasisprofielAsync(BasisProfielRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -52,6 +56,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<BasisProfielResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<BasisprofielEigenaarResponse?> GetBasisprofielEigenaarAsync(BasisprofielEigenaarRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -59,6 +64,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<BasisprofielEigenaarResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<BasisprofielHoofdvestigingResponse?> GetBasisprofielHoofdvestigingAsync(BasisprofielHoofdvestigingRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -66,6 +72,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<BasisprofielHoofdvestigingResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<BasisprofielVestigingenResponse?> GetBasisprofielVestigingenAsync(BasisprofielVestigingenRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -73,6 +80,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<BasisprofielVestigingenResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<NaamgevingenResponse?> GetNaamgevingenAsync(NaamgevingenRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -80,6 +88,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<NaamgevingenResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<VestigingsprofielenResponse?> GetVestigingsprofielenAsync(VestigingsprofielenRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);
@@ -87,6 +96,7 @@ public class KvkApiV1Client : IKvkApiV1Client
         return await client.GetFromJsonAsync<VestigingsprofielenResponse>(url, cancellationToken);
     }
 
+    /// <inheritdoc />
     public async Task<ZoekResponse?> ZoekenAsync(ZoekRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV1ClientName);

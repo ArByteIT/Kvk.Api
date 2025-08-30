@@ -3,8 +3,6 @@ using Kvk.Api.Client.Options;
 using Kvk.Api.Client.V2.Zoeken;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Json;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace Kvk.Api.Client.V2;
 
@@ -19,6 +17,7 @@ public class KvkApiV2Client : IKvkApiV2Client
         _options = options.Value;
     }
 
+    /// <inheritdoc />
     public async Task<ZoekResponse?> ZoekenAsync(ZoekRequest request, CancellationToken cancellationToken = default)
     {
         var client = _httpClientFactory.CreateClient(KvkOptions.HttpV2ClientName);
