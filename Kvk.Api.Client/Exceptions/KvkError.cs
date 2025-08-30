@@ -6,6 +6,7 @@ public class KvkError
 {
     [JsonPropertyName("code")]
     public string Code { get; set; } = string.Empty;
+
     [JsonPropertyName("omschrijving")]
     public string Omschrijving { get; set; } = string.Empty;
 }
