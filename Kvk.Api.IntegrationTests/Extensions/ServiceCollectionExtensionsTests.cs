@@ -29,7 +29,7 @@ public class ServiceCollectionExtensionsTests
             .Build();
 
         // Act
-        services.AddKvkApiClient(configuration);
+        services.AddKvkApiClients(configuration);
 
         var provider = services.BuildServiceProvider();
 

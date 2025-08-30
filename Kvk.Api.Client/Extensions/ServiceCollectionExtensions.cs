@@ -12,10 +12,29 @@ namespace Kvk.Api.Client.Extensions;
 public static class ServiceCollectionExtensions
 {
     /// <summary>
-    /// Adds the Kvk API V1 client to the service collection.
+    /// Registers both the Kvk API V1 and V2 clients in the service collection.
     /// </summary>
-    /// <param name="services">The service collection.</param>
+    /// <param name="services">The service collection to extend.</param>
+    /// <param name="configuration">The application configuration used for Kvk options.</param>
     /// <returns>The updated service collection.</returns>
+    public static IServiceCollection AddKvkApiClients(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddKvkApiV1Client(configuration);
+
+        services.AddKvkApiV2Client(configuration);
+
+        return services;
+    }
+
+    /// <summary>
+    /// Registers the Kvk API V1 client and its dependencies in the service collection.
+    /// Configures <see cref="KvkOptions"/> from configuration, 
+    /// adds the <see cref="KvkApiErrorHandler"/> message handler,
+    /// and registers a named <see cref="HttpClient"/> with base address and headers.
+    /// </summary>
+    /// <param name="services">The service collection to extend.</param>
+    /// <param name="configuration">The application configuration used for Kvk options.</param>
+    /// <returns>An <see cref="IHttpClientBuilder"/> for further client configuration.</returns>
     public static IHttpClientBuilder AddKvkApiV1Client(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<KvkOptions>(configuration.GetRequiredSection(KvkOptions.SectionName));
@@ -39,10 +58,14 @@ public static class ServiceCollectionExtensions
     }
 
     /// <summary>
-    /// Adds the Kvk API V2 client to the service collection.
+    /// Registers the Kvk API V2 client and its dependencies in the service collection.
+    /// Configures <see cref="KvkOptions"/> from configuration, 
+    /// adds the <see cref="KvkApiErrorHandler"/> message handler,
+    /// and registers a named <see cref="HttpClient"/> with base address and headers.
     /// </summary>
-    /// <param name="services">The service collection.</param>
-    /// <returns>The updated service collection.</returns>
+    /// <param name="services">The service collection to extend.</param>
+    /// <param name="configuration">The application configuration used for Kvk options.</param>
+    /// <returns>An <see cref="IHttpClientBuilder"/> for further client configuration.</returns>
     public static IHttpClientBuilder AddKvkApiV2Client(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<KvkOptions>(configuration.GetRequiredSection(KvkOptions.SectionName));
