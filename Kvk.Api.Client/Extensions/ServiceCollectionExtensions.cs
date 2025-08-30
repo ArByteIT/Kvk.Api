@@ -19,16 +19,20 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddKvkApiClient(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<KvkOptions>(configuration.GetRequiredSection(KvkOptions.SectionName));
+
         services.AddTransient<KvkApiErrorHandler>();
+
+        var productName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name ?? "KvkApiClient";
+        var productVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "1.0.0";
 
         // V1 Client
         services.AddTransient<IKvkApiV1Client, KvkApiV1Client>();
         services.AddHttpClient(KvkOptions.HttpV1ClientName, (provider, client) =>
         {
             var options = provider.GetRequiredService<IOptions<KvkOptions>>().Value;
+
             client.BaseAddress = new Uri($"{options.BaseUrl}api/v1/");
-            // client.DefaultRequestHeaders.Add("Accept", "application/json");
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue(productName, productVersion));
             client.DefaultRequestHeaders.Add("apikey", options.ApiKey);
         })
             .AddHttpMessageHandler<KvkApiErrorHandler>();
@@ -38,9 +42,9 @@ public static class ServiceCollectionExtensions
         services.AddHttpClient(KvkOptions.HttpV2ClientName, (provider, client) =>
         {
             var options = provider.GetRequiredService<IOptions<KvkOptions>>().Value;
+
             client.BaseAddress = new Uri($"{options.BaseUrl}api/v2/");
-            // client.DefaultRequestHeaders.Add("Accept", "application/json");
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue(productName, productVersion));
             client.DefaultRequestHeaders.Add("apikey", options.ApiKey);
         })
             .AddHttpMessageHandler<KvkApiErrorHandler>();
