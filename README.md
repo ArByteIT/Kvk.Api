@@ -1,4 +1,4 @@
-[![Kvk.Api.Client Nuget](https://img.shields.io/nuget/v/Kvk.Api.Client.svg?style=flat)](https://www.nuget.org/packages/Kvk.Api.Client)
+[![Kvk.Api.Client Nuget](https://img.shields.io/nuget/v/ArByte.Kvk.Api.Client.svg?style=flat)](https://www.nuget.org/packages/Kvk.Api.Client)
 ![.NET Integration Tests](https://github.com/ArbyteIt/Kvk.Api/actions/workflows/dotnet-integration-tests.yml/badge.svg)
 
 # Kvk.Api.Client
@@ -22,7 +22,7 @@ Ondersteunt zoeken, basisprofiel, vestigingsprofiel, naamgeving en mutatieservic
 Install de NuGet package met:
 
 ```bash
-dotnet add package Kvk.Api.Client
+dotnet add package ArByte.Kvk.Api.Client
 ````
 
 ---
@@ -122,4 +122,4 @@ Dit project is gelicentieerd onder de MIT-licentie – zie het [LICENSE](LICENSE) 
 ## Links
 
 * [Kvk API Documentation](https://developers.kvk.nl/documentation)
-* [NuGet Package](https://www.nuget.org/packages/Kvk.Api.Client)
+* [NuGet Package](https://www.nuget.org/packages/ArByte.Kvk.Api.Client)
