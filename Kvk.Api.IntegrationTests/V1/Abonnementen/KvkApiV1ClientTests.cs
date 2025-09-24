@@ -33,7 +33,7 @@ public class KvkApiV1ClientTests : BaseTests
         var request = new AbonnementSignalenRequest()
         {
             AbonnementId = "1365acf9-0b63-3ed4-9e68-a8c37425080b",
-            SignaalId = "a816c1f6-51b8-4c92-b8b3-44fce6410e8b",
+            SignaalId = "321367a2-0f69-4c4f-b642-94d16a06205f",
         };
 
         var response = await _kvkApiV1Client.GetAbonnementSignalenAsync(request);

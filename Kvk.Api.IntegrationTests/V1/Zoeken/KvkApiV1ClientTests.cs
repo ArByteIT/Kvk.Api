@@ -5,7 +5,7 @@ namespace Kvk.Api.IntegrationTests.V1.Zoeken;
 
 public class KvkApiV1ClientTests : BaseTests
 {
-    [Fact]
+    [Fact(Skip = "Deprecated")]
     public async Task SearchAsync_SearchKvkNumber_ReturnsSuccess()
     {
         var request = new ZoekRequest()
@@ -24,7 +24,7 @@ public class KvkApiV1ClientTests : BaseTests
         }
     }
 
-    [Fact]
+    [Fact(Skip = "Deprecated")]
     public async Task SearchAsync_SearchKvkNumber_ReturnsNotFound()
     {
         var request = new ZoekRequest()
@@ -36,7 +36,7 @@ public class KvkApiV1ClientTests : BaseTests
         await Assert.ThrowsAsync<KvkApiNotFoundException>(() => _kvkApiV1Client.ZoekenAsync(request));
     }
 
-    [Fact]
+    [Fact(Skip = "Deprecated")]
     public async Task SearchAsync_SearchKvkNumber_ReturnsBadRequest()
     {
         var request = new ZoekRequest()
