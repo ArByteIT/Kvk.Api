@@ -1,4 +1,4 @@
-[![Kvk.Api.Client Nuget](https://img.shields.io/nuget/v/ArByte.Kvk.Api.Client.svg?style=flat)](https://www.nuget.org/packages/Kvk.Api.Client)
+[![Kvk.Api.Client Nuget](https://img.shields.io/nuget/v/ArByte.Kvk.Api.Client.svg?style=flat)](https://www.nuget.org/packages/ArByte.Kvk.Api.Client)
 ![.NET Integration Tests](https://github.com/ArbyteIt/Kvk.Api/actions/workflows/dotnet-integration-tests.yml/badge.svg)
 
 # Kvk.Api.Client
@@ -13,7 +13,7 @@ Ondersteunt zoeken, basisprofiel, vestigingsprofiel, naamgeving en mutatieservic
 - Automatische foutverwerking met expliciete uitzonderingen voor API-fouten
 - Ondersteunt annuleringstokens voor asynchrone aanroepen
 - Eenvoudige integratie met `IHttpClientFactory` en Dependency Injection
-- Inclusief integratietests om API-interacties te verifiëren
+- Inclusief integratietests om API-interacties te verifiÃ«ren
 
 ---
 
@@ -29,7 +29,7 @@ dotnet add package ArByte.Kvk.Api.Client
 
 ## Getting Started
 
-### Registratie van de cliënt
+### Registratie van de cliÃ«nt
 
 Configureer uw services in `Startup.cs` of waar DI configureert wordt:
 
@@ -102,7 +102,7 @@ Gebruik try-catch-blokken om deze op een nette manier af te handelen.
 
 ## Testen
 
-Inclusief integratietests met xUnit om het gedrag van de live API te verifiëren.
+Inclusief integratietests met xUnit om het gedrag van de live API te verifiÃ«ren.
 Configureer je `KVK_API_KEY` omgevingsvariabele voordat je de tests uitvoert.
 
 ---
@@ -115,7 +115,7 @@ Bijdragen zijn welkom! Open issues of pull requests.
 
 ## Licentie
 
-Dit project is gelicentieerd onder de MIT-licentie – zie het [LICENSE](LICENSE) bestand voor details.
+Dit project is gelicentieerd onder de MIT-licentie â€“ zie het [LICENSE](LICENSE) bestand voor details.
 
 ---
 
